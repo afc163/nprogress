@@ -71,8 +71,6 @@
         speed    = Settings.speed,
         ease     = Settings.easing;
 
-    progress.offsetWidth; /* Repaint */
-
     queue(function(next) {
       // Set positionUsing if it hasn't already been set
       if (Settings.positionUsing === '') Settings.positionUsing = NProgress.getPositioningCSS();
@@ -86,7 +84,6 @@
           transition: 'none',
           opacity: 1
         });
-        progress.offsetWidth; /* Repaint */
 
         setTimeout(function() {
           css(progress, {
